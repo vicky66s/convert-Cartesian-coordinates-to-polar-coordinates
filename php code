@@ -1,0 +1,15 @@
+<?php
+function cartesian_to_polar($x, $y) {
+    $r = sqrt($x * $x + $y * $y);
+    $theta = atan2($y, $x); // atan2 calculates arctan(y/x) taking into account the quadrant of the point
+    return array($r, $theta);
+}
+
+// Example usage of the function
+$x = 3;
+$y = 4;
+$polar_coordinates = cartesian_to_polar($x, $y);
+$r = $polar_coordinates[0];
+$theta = $polar_coordinates[1];
+echo "r = $r, theta = $theta";
+?>
